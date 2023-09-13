@@ -40,3 +40,19 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/*                                                MY CODE*/
+
+.page{
+  height: 100vh;
+}
+
+nav{
+  position: absolute;
+  width: 200px;
+  height: 400px;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
