@@ -1,4 +1,6 @@
 import './App.css'
+import { Routes, Route, useLocation } from "react-router-dom"
+
 import Navbar from "./components/Navbar"
 import Home from "./components/pages/Home"
 import About from "./components/pages/About"
@@ -7,14 +9,31 @@ import Contact from "./components/pages/Contact"
 
 function App() {
 
+  const location = useLocation();
+
   return (
-    <>
+    <div>
       <Navbar />
-      <Home />
-      <About />
-      <Work />
-      <Contact />
-    </>
+      <Routes location={location} key={location.pathname}>
+
+        <Route index element={
+          <Home />
+        }/>
+        <Route path="/about" element={
+          <About />
+        }/>
+        <Route path="/work" element={
+          <Work />
+        }/>
+        <Route path="/contact" element={
+          <Contact />
+        }/>
+
+      </Routes>
+
+
+
+    </div>
   )
 }
 
