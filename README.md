@@ -28,3 +28,4 @@ Pages
 - react router
 - react spring
 - framer motion
+- firebase
