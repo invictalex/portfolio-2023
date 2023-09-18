@@ -2,9 +2,9 @@ import ContactForm from "./sections/ContactForm"
 
 export default function Contact() {
     return(
-        <div className="page">
+        <section class="contact">
             <h1>Contact</h1>
             <ContactForm />
-        </div>
+        </section>
     )
 }

@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
+import { useRef } from "react"
 
 export default function Navbar(){
+
+
     return(
         <nav>
-            <Link to="/"><p>Home</p></Link>
-            <Link to="/about"><p>About</p></Link>
-            <Link to="/work"><p>Work</p></Link>
-            <Link to="/contact"><p>Contact</p></Link>
+            <p >Home</p>
+            <p >About</p>
+            <p >Work</p>
+            <p>Contact</p>
         </nav>
     )
 }

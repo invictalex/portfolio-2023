@@ -1,6 +1,7 @@
 import './App.css'
-import { Routes, Route, useLocation } from "react-router-dom"
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { useRef } from "react"
+
 
 
 import Navbar from "./components/Navbar"
@@ -11,40 +12,21 @@ import Contact from "./components/pages/Contact"
 
 function App() {
 
-  const location = useLocation();
-
+  
   return (
     <div>
-      <Navbar />
-      <Routes location={location} key={location.pathname}>
-        <Parallax pages={4} style={{ top: '0', left: '0' }}>
+      
+          <Navbar />
+          <Parallax pages={3} style={{top:'0', left:'0'}} className="parent">
+          <Home className="parallax"/>
+          <About className="parallax"/>
         
-          <ParallaxLayer offset={0} speed={2.5}>
-            <Route index element={
-              <Home />
-            }/>
-          </ParallaxLayer>
 
-          <ParallaxLayer offset={1} speed={2.5}>
-            <Route path="/about" element={
-              <About />
-            }/>
-          </ParallaxLayer>
+          <Work className="parallax"/>
+          <Contact className="parallax" />
+          </Parallax>
 
-          <ParallaxLayer offset={2} speed={2.5}>
-            <Route path="/work" element={
-              <Work />
-            }/>
-          </ParallaxLayer>
 
-          <ParallaxLayer offset={3} speed={2.5}>
-            <Route path="/contact" element={
-              <Contact />
-            }/>
-          </ParallaxLayer>
-
-        </ Parallax>
-      </Routes>
 
 
 
