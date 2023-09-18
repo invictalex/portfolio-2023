@@ -1,8 +1,6 @@
 import './App.css'
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import { useRef } from "react"
-
-
+import { useRef, useEffect, useState} from "react"
 
 import Navbar from "./components/Navbar"
 import Home from "./components/pages/Home"
@@ -11,26 +9,37 @@ import Work from "./components/pages/Work"
 import Contact from "./components/pages/Contact"
 
 function App() {
+  const ref = useRef()
 
-  
+  const [YPosition, setYPosition] = useState(0)
+
+  const handleScroll = () => ref.current && setYPosition(ref.current.current)
+  console.log(YPosition)
+
+  useEffect(() => {
+    const myApp = document.querySelector('.app')
+    myApp.addEventListener('scroll', handleScroll)
+    return () => {myApp.removeEventListener('scroll', handleScroll)}
+  }, [])
+
   return (
-    <div>
+  <Parallax pages={3} style={{top:'0', left:'0'}} ref={ref} className="app" >
       
-          <Navbar />
-          <Parallax pages={3} style={{top:'0', left:'0'}} className="parent">
-            <Home className="parallax"/>
-            <About className="parallax"/>
-          
+    <ParallaxLayer sticky={{start: 0, end: 3}}>
+      <Navbar reference={ref} YPosition={YPosition}/>
+    </ParallaxLayer>
 
-            <Work className="parallax"/>
-            <Contact className="parallax" />
-          </Parallax>
+    <Home />
+    <About />
+    <Work />
+    <Contact />
 
-
-
+  </Parallax>
 
 
-    </div>
+
+      
+   
   )
 }
 

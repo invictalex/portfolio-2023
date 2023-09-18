@@ -1,34 +1,103 @@
 
+@font-face {
+  font-family: satoshi-r;
+  src: url(assets/fonts/Satoshi-Regular.otf);
+}
+@font-face {
+  font-family: satoshi-m;
+  src: url(assets/fonts/Satoshi-Medium.otf);
+}
+
+:root{
+  --darkest: #2a2d2b;
+  --darker: #3a403d;
+  --dark: #4b5550;
+  --light: #ebefe8;
+  --nav-color: #2a2d2b;
+  font-family: satoshi-r, sans-serif;
+}
+
 body{
-  background: #4b5550;
+  background: var(--dark);
 }
 
 nav{
-  position: fixed!important;
-  width: 200px;
-  height: 400px;
+  position: absolute;
   top: 0;
+  right: 0;
+  padding-right: 20px;
+  z-index: 2;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  color: var(--nav-color)
+}
+
+nav div{
+  text-transform: lowercase;
+  position: relative;
+}
+
+nav div{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+nav div span{
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: var(--nav-color);
+  margin-right: 5px;
+  border-radius: 30%;
+  display:none;
+
+}
+
+nav div::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
   left: 0;
-  padding: 20px;
-  z-index: 100;
+  background-color: var(--nav-color);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+  transform: scaleX(0);
 }
 
+nav div:hover::after{
+  transform: scaleX(1);
+  cursor: pointer;
+
+}
+
+
+.homepage{
+  background: var(--light);
+}
+.homepage .parallax-image-layer{
+  background-size:1800px;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  height: 100vh;
+  width: 100%
+}
+.about{
+  background: var(--darker);
+  background: linear-gradient(0deg, var(--darker) 0%, var(--darkest) 100%);
+}
+.work{
+  background: var(--dark);
+  background: linear-gradient(0deg, var(--dark) 0%, var(--darker) 100%);
+}
+.parallax-page{
+  min-height: 100vh;
+}
 section{
-  min-height: 100vh;
-}
-
-.parallax-layer{
-  min-height: 100vh;
-}
-.about.parallax-layer{
-  background: #3a403d;
-  background: linear-gradient(0deg, #3a403d 0%, #2a2d2b 100%);
-}
-.work.parallax-layer{
-  background: #4b5550;
-  background: linear-gradient(0deg, #4b5550 0%, #3a403d 100%);
-}
-.about--content, .work--content, .contact--content{
   width: 90%;
   height: 90%;
   border: solid 2px red;
@@ -37,20 +106,12 @@ section{
   left: 50%;
   transform: translateX(-50%)
 }
-.home{
-  background: #ebefe8;
-}
 
-.home--img-layer{
-  background-size:1800px;
-  background-repeat: repeat-x;
-  background-position: bottom;
-  height: 100vh;
-  width: 100%
-}
 
-@media (max-width: 1400px){ .home--img-layer{background-size:1400px; }}
-@media (max-width: 1000px){ .home--img-layer{background-size:1000px; }}
+
+
+@media (max-width: 1400px){ .parallax-image-layer{background-size:1400px; }}
+@media (max-width: 1000px){ .parallax-image-layer{background-size:1000px; }}
 
 
 
