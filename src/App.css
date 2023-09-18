@@ -1,34 +1,38 @@
 
+:root{
+  --darkest: #2a2d2b;
+  --darker: #3a403d;
+  --dark: #4b5550;
+  --light: #ebefe8;
+}
+
 body{
-  background: #4b5550;
+  background: var(--dark);
 }
 
 nav{
-  position: fixed!important;
   width: 200px;
   height: 400px;
-  top: 0;
-  left: 0;
   padding: 20px;
   z-index: 100;
 }
 
-section{
-  min-height: 100vh;
-}
 
-.parallax-layer{
+.homepage{
+  background: var(--light);
+}
+.about{
+  background: var(--darker);
+  background: linear-gradient(0deg, var(--darker) 0%, var(--darkest) 100%);
+}
+.work{
+  background: var(--dark);
+  background: linear-gradient(0deg, var(--dark) 0%, var(--darker) 100%);
+}
+.parallax-page{
   min-height: 100vh;
 }
-.about.parallax-layer{
-  background: #3a403d;
-  background: linear-gradient(0deg, #3a403d 0%, #2a2d2b 100%);
-}
-.work.parallax-layer{
-  background: #4b5550;
-  background: linear-gradient(0deg, #4b5550 0%, #3a403d 100%);
-}
-.about--content, .work--content, .contact--content{
+section{
   width: 90%;
   height: 90%;
   border: solid 2px red;
@@ -37,11 +41,9 @@ section{
   left: 50%;
   transform: translateX(-50%)
 }
-.home{
-  background: #ebefe8;
-}
 
-.home--img-layer{
+
+.homepage .parallax-image-layer{
   background-size:1800px;
   background-repeat: repeat-x;
   background-position: bottom;
@@ -49,8 +51,8 @@ section{
   width: 100%
 }
 
-@media (max-width: 1400px){ .home--img-layer{background-size:1400px; }}
-@media (max-width: 1000px){ .home--img-layer{background-size:1000px; }}
+@media (max-width: 1400px){ .parallax-image-layer{background-size:1400px; }}
+@media (max-width: 1000px){ .parallax-image-layer{background-size:1000px; }}
 
 
 

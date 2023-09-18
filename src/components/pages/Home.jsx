@@ -14,19 +14,19 @@ const layers = [layer7, layer6, layer5, layer4, layer3, layer2, layer1]
 
 export default function WelcomeAndAbout(){
 
-    const background = layers.map((layer, i) => {
+    const backgroundImages = layers.map((layer, i) => {
 
         return(
             <ParallaxLayer offset={0} speed={i/10} factor={1}>
-                <div className="home--img-layer" style={{backgroundImage: `url(${layer})`}}></div>
+                <div className="parallax-image-layer" style={{backgroundImage: `url(${layer})`}}></div>
             </ParallaxLayer>
         )
             
     })
 
     return(
-        <div className="home">
-            {background}
+        <div className="homepage">
+            {backgroundImages}
         </div>
     )
 }

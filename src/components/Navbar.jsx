@@ -1,14 +1,18 @@
 import { useRef } from "react"
+import { ParallaxLayer } from '@react-spring/parallax'
+
 
 export default function Navbar(){
 
 
     return(
-        <nav>
-            <p >Home</p>
-            <p >About</p>
-            <p >Work</p>
-            <p>Contact</p>
-        </nav>
+        <ParallaxLayer offset={0} sticky>
+            <nav>
+                <p>Home</p>
+                <p>About</p>
+                <p>Work</p>
+                <p>Contact</p>
+            </nav>
+        </ParallaxLayer>
     )
 }

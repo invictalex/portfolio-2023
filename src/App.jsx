@@ -14,23 +14,19 @@ function App() {
 
   
   return (
-    <div>
-      
-          <Navbar />
-          <Parallax pages={3} style={{top:'0', left:'0'}} className="parent">
-            <Home className="parallax"/>
-            <About className="parallax"/>
-          
+    <Parallax pages={3} style={{top:'0', left:'0'}}>
 
-            <Work className="parallax"/>
-            <Contact className="parallax" />
-          </Parallax>
+      <Navbar />
+      <Home />
+      <About />
+      <Work />
+      <Contact />
+
+    </Parallax>
 
 
 
 
-
-    </div>
   )
 }
 

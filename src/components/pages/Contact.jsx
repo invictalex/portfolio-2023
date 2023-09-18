@@ -4,14 +4,13 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 export default function Contact() {
     return(
-        <ParallaxLayer offset={2} factor={1} speed={0.5} className="contact parallax-layer">
-        <section>
-            <div className="contact--content">
-            <h1>Contact</h1>
-            <ContactForm />
-            </div>
+        <ParallaxLayer offset={2} factor={1} speed={0.5} className="contact parallax-page">
+
+            <section className="content">
+                <h1>Contact</h1>
+                <ContactForm />
+            </section>
             
-        </section>
         </ParallaxLayer>
     )
 }
