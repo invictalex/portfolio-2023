@@ -25,7 +25,7 @@ function App() {
   return (
   <Parallax pages={3} style={{top:'0', left:'0'}} ref={ref} className="app" >
       
-    <ParallaxLayer sticky={{start: 0, end: 3}}>
+    <ParallaxLayer sticky={{start: 0, end: 3}} className="container--nav">
       <Navbar reference={ref} YPosition={YPosition}/>
     </ParallaxLayer>
 
