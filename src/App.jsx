@@ -18,12 +18,12 @@ function App() {
       
           <Navbar />
           <Parallax pages={3} style={{top:'0', left:'0'}} className="parent">
-          <Home className="parallax"/>
-          <About className="parallax"/>
-        
+            <Home className="parallax"/>
+            <About className="parallax"/>
+          
 
-          <Work className="parallax"/>
-          <Contact className="parallax" />
+            <Work className="parallax"/>
+            <Contact className="parallax" />
           </Parallax>
 
 

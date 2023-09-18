@@ -25,8 +25,8 @@ export default function WelcomeAndAbout(){
     })
 
     return(
-        <section className="home">
+        <div className="home">
             {background}
-        </section>
+        </div>
     )
 }
