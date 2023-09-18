@@ -1,5 +1,4 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import About from "./About"
+import { ParallaxLayer } from '@react-spring/parallax'
 import layer1 from "../../../src/assets/layers/layer1.svg"
 import layer2 from "../../../src/assets/layers/layer2.svg"
 import layer3 from "../../../src/assets/layers/layer3.svg"
@@ -12,20 +11,20 @@ const layers = [layer7, layer6, layer5, layer4, layer3, layer2, layer1]
 
 
 
-export default function WelcomeAndAbout(){
+export default function Home(){
 
     const backgroundImages = layers.map((layer, i) => {
 
         return(
             <ParallaxLayer offset={0} speed={i/10} factor={1}>
-                <div className="parallax-image-layer" style={{backgroundImage: `url(${layer})`}}></div>
+                <div onScroll={() => console.log("scrolling")} className="parallax-image-layer" style={{backgroundImage: `url(${layer})`}}></div>
             </ParallaxLayer>
         )
             
     })
 
     return(
-        <div className="homepage">
+        <div  className="homepage">
             {backgroundImages}
         </div>
     )

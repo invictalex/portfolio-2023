@@ -10,11 +10,20 @@ body{
   background: var(--dark);
 }
 
+.master{
+  overflow: scroll;
+}
+
 nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align:end;
   width: 200px;
   height: 400px;
-  padding: 20px;
-  z-index: 100;
+  padding-right: 20px;
+  z-index: 2;
+  transition: 0.3s;
 }
 
 

@@ -1,5 +1,5 @@
 import ContactForm from "./sections/ContactForm"
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { ParallaxLayer } from '@react-spring/parallax'
 
 
 export default function Contact() {
@@ -10,7 +10,7 @@ export default function Contact() {
                 <h1>Contact</h1>
                 <ContactForm />
             </section>
-            
+
         </ParallaxLayer>
     )
 }

@@ -1,5 +1,5 @@
 import Projects from "./sections/Projects"
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { ParallaxLayer } from '@react-spring/parallax'
 
 
 export default function Work() {
