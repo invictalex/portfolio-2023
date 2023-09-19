@@ -11,7 +11,11 @@ export default function Technologies() {
 
     return(
         <div className="about--technologies">
-            {icons}
+            <h3 className="technologies--heading">My technologies</h3>
+            <div className="technologies--icons">
+                {icons}
+            </div>
+            
         </div>
     )
 }

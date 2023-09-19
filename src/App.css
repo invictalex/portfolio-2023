@@ -28,7 +28,7 @@ section{
   color: var(--light);
   width: 90%;
   height: 90%;
-  border: solid 2px red;
+  /*border: solid 2px red;*/
   position: absolute;
   top: 15px;
   left: 50%;
@@ -47,6 +47,7 @@ section{
 
 .container--nav{
   width: 100px!important;
+  height: 100px!important;
   inset: 100vw!important;
   top: 0!important;
 
@@ -120,7 +121,13 @@ nav div:hover::after{
 @media (max-width: 1400px){ .parallax-image-layer{background-size:1400px; }}
 @media (max-width: 1000px){ .parallax-image-layer{background-size:1000px; }}
 
+
+
+
 /*                                                        ABOUT*/
+
+
+
 .about{
   background: var(--darker);
   background: linear-gradient(0deg, var(--darker) 0%, var(--darkest) 100%);
@@ -131,6 +138,8 @@ nav div:hover::after{
   justify-content: center;
   align-items:center;
   text-align: center;
+  color: #9ba19d
+
 }
 
 .about--bio, .about--technologies{
@@ -146,9 +155,38 @@ nav div:hover::after{
 }
 
 .bio--avatar:hover{
-  stroke: rgba(255, 255, 255, 0.326);
+  fill: rgba(255, 255, 255, 0.155);
   stroke-width: 5px;
-  stroke-linejoin:bevel
+  stroke-linejoin:bevel;
+  transform: translateY(-10px)
+}
+
+.about--bio--text{
+}
+
+.about--bio--resume{
+  font-size: 18px;
+  margin: 0;
+}
+.about--bio--resume:hover a {
+  color: var(--light)
+}
+.about--bio--resume:hover .about--bio--resume--icon{
+  transform: translate(5px, 2px);
+  opacity: 1;
+
+
+}
+.about--bio--resume a{
+  color: inherit;
+}
+.about--bio--resume--icon{
+  width: 15px;
+  transform: translate(-10px, 2px);
+
+
+  opacity: 0;
+  transition: 0.3s;
 }
 
 .about--divider{
@@ -156,26 +194,31 @@ nav div:hover::after{
   width: 1px;
   background: var(--darker);
   display: block;
-  margin-inline: 30px;
+  margin-inline: 40px;
 }
 
 .about--technologies{
+}
+
+.technologies--heading{
+  font-weight: 400;
+  margin-bottom: 50px;
+
+}
+
+.technologies--icons{
   display: flex;
   flex-wrap: wrap;
-  padding-inline: 100px;
-  gap: 10px;
 }
 
 .icon{
-  width: 70px;
   height: 100px;
-  flex: 20%;
+  flex: 25%;
   transition: 0.3s;
-
 }
 
 .icon:nth-child(1), .icon:nth-child(2), .icon:nth-child(3), .icon:nth-child(12), .icon:nth-child(13), .icon:nth-child(14){
-  flex: 30%;
+  flex: 33%;
 }
 
 
@@ -199,6 +242,27 @@ nav div:hover::after{
 }
 .icon:hover .icon--text{
   opacity:1
+}
+
+@media(max-width: 650px){
+  .about section{
+    flex-direction: column;
+  }
+
+  .about--bio{
+    margin-top: 50px;
+  }
+
+  .about--divider{
+    min-height: 1px;
+    width: 80%;
+    margin-inline: 0;
+    margin-block: 40px;
+  }
+
+  .icon{
+    height: auto
+  }
 }
 
 
