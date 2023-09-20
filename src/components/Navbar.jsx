@@ -23,7 +23,7 @@ export default function Navbar(props){
             </div>
             <div classname="item" onClick={() => current.scrollTo(1.25)}>
                 <span style={{display: 793 <= y && 1293 >= y  ? "block" : "none" }}></span>
-                Work
+                Projects
             </div>
             <div classname="item" onClick={() => current.scrollTo(2)}>
                 <span style={{display: 1293 <= y ? "block" : "none" }}></span>
