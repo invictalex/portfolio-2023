@@ -35,7 +35,7 @@ function App() {
 
     <Home />
     <About />
-    <Work />
+    <Work YPosition={YPosition}/>
     <Contact />
 
   </Parallax>

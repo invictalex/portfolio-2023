@@ -35,6 +35,7 @@ section{
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box;
+  transition: 0.3s;
 }
 
 .section-heading{
@@ -336,7 +337,7 @@ nav div:hover::after{
   margin-bottom: 95px;
   height: 400px;
   overflow: hidden;
-  border: solid 2px blue;
+ /* border: solid 2px blue;*/
 }
 .project-card:nth-child(2), .project-card:nth-child(4){
   flex-direction: row;
@@ -461,4 +462,103 @@ margin-bottom: 0;
   .project-card{
     margin-bottom: 0;
   }
+}
+
+
+/*                                                  CONTACT*/
+
+.contact section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.contact-form--info{
+  width: 100%;
+  text-align: center
+}
+
+.contact h1, .contact p{
+  margin:10px;
+}
+
+form{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+}
+input, textarea{
+  width: 100%;
+  padding: 10px;
+  resize: none;
+  background-color: #56615c;
+  border: none;
+  color: var(--light);
+  font-size: 18px;
+}
+
+input:focus, textarea:focus{
+  border: none;
+  outline:none;
+}
+
+input::placeholder, textarea::placeholder{
+  color: var(--light);
+  opacity: 0.3;
+}
+
+textarea{
+  height: 150px;
+}
+
+.contact button{
+  margin-top: 10px;
+  align-items: flex-end;
+  background: transparent;
+  border-radius: 0;
+  position: relative;
+  display:block;
+  height: 35px;
+  width: 90px;
+  font-weight: 700;
+  color: white;
+  border-left: 2px white solid;
+  text-transform: uppercase;
+  overflow:hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition:         0.08s ease-in;
+  -o-transition:      0.08s ease-in;
+  -ms-transition:     0.08s ease-in;
+  -moz-transition:    0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+  padding: 5px;
+}
+
+.contact button:before{
+  content: "";
+  position: absolute;
+  background: white;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: right 0.09s ease-in;
+}
+
+.contact button:hover{
+  outline: none;
+  border: none;
+  color: var(--dark)
+}
+.contact button:hover:before{
+  right:0;
 }
