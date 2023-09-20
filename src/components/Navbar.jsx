@@ -14,19 +14,19 @@ export default function Navbar(props){
     return(
        <nav style={{"--nav-color": y >= 200 ? "#ebefe8" : "#2a2d2b"}}>
             <div classname="item" onClick={() => current.scrollTo(0) }>
-                <span style={{display: 293 >= y  ? "block" : "none" }}></span>
+                <span style={{display: 400 >= y  ? "block" : "none" }}></span>
                 Home
             </div>
             <div classname="item" onClick={() => current.scrollTo(0.59)}>
-                <span style={{display: 293 <= y && 793 >= y  ? "block" : "none" }}></span>
+                <span style={{display: 400 <= y && 893 >= y  ? "block" : "none" }}></span>
                 About
             </div>
-            <div classname="item" onClick={() => current.scrollTo(1.25)}>
-                <span style={{display: 793 <= y && 1293 >= y  ? "block" : "none" }}></span>
+            <div classname="item" onClick={() => current.scrollTo(1.3)}>
+                <span style={{display: 893 <= y && 2000 >= y  ? "block" : "none" }}></span>
                 Projects
             </div>
-            <div classname="item" onClick={() => current.scrollTo(2)}>
-                <span style={{display: 1293 <= y ? "block" : "none" }}></span>
+            <div classname="item" onClick={() => current.scrollTo(3)}>
+                <span style={{display: 2000 <= y ? "block" : "none" }}></span>
                 Contact
             </div>
         </nav>
