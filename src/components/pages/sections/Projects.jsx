@@ -5,7 +5,9 @@ export default function Projects() {
 
     const projects = data.projects.map((project, i) => (
         <div className="project-card">
-            <div className="project-image" style={{backgroundImage: `url(${project.image}`}}></div>
+            <div className="project-image" style={{backgroundImage: `url(${project.image}`}}>
+                <a href={project.url} target="_blank"></a>
+            </div>
             <div className="project-info">
                 <h3 className="project-info--title">            
                     {project.name}

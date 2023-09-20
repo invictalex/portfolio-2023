@@ -30,7 +30,7 @@ export default function Technologies() {
 
     return(
         <div className="about--technologies">
-            <h3 className="technologies--heading">My technologies</h3>
+            <h2 className="technologies--heading">My technologies</h2>
             <div className="technologies--icons">
                 {makeRows()}
             </div>

@@ -4,9 +4,9 @@ export default function NavbarMobile(props){
 
     return(
         <nav className="mobileNav" style={{display: 500 <= y  ? "block" : "none" }}>
-            {(293 <= y && 893 >= y) && <p>About</p>}
-            {(893 <= y && 2000 >= y) && <p>Projects</p>}
-            {(2000 <= y) && <p>Contact</p>}
+            {(293 <= y && 893 >= y) && <div>About</div>}
+            {(893 <= y && 2300 >= y) && <div>Projects</div>}
+            {(2300 <= y) && <div>Contact</div>}
         </nav>
     )
 }

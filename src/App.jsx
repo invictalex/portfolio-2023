@@ -26,17 +26,17 @@ function App() {
   return (
   <Parallax pages={4} style={{top:'0', left:'0'}} ref={ref} className="app" >
       
-    <ParallaxLayer sticky={{start: 0, end: 3}} className="container--nav">
+    <ParallaxLayer sticky={{start: 0, end: 4}} className="container--nav">
       <Navbar reference={ref} YPosition={YPosition}/>
     </ParallaxLayer>
-    <ParallaxLayer sticky={{start: 0, end: 3}} className="container--navMobile">
+    <ParallaxLayer sticky={{start: 0, end: 4}} className="container--navMobile">
       <NavbarMobile reference={ref} YPosition={YPosition}/>
     </ParallaxLayer>
 
     <Home />
     <About />
     <Work YPosition={YPosition}/>
-    <Contact />
+    <Contact  YPosition={YPosition} />
 
   </Parallax>
 
