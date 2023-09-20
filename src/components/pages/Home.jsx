@@ -6,8 +6,9 @@ import layer4 from "../../../src/assets/layers/layer4.svg"
 import layer5 from "../../../src/assets/layers/layer5.svg"
 import layer6 from "../../../src/assets/layers/layer6.svg"
 import layer7 from "../../../src/assets/layers/layer7.svg"
+import ParticlesBackground from '../../components/ParticlesBackground.jsx'
 
-const layers = [layer7, layer6, layer5, layer4, layer3, layer2, layer1]
+const layers = [ layer6, layer5, layer4, layer3, layer2, layer1]
 
 
 
@@ -16,7 +17,7 @@ export default function Home(){
     const backgroundImages = layers.map((layer, i) => {
 
         return(
-            <ParallaxLayer speed={i/10}>
+            <ParallaxLayer speed={i/10} className="homepage=parallax">
                 <div className="parallax-image-layer" style={{backgroundImage: `url(${layer})`}}></div>
             </ParallaxLayer>
         )
@@ -25,7 +26,9 @@ export default function Home(){
 
     return(
         <div  className="homepage">
+
             {backgroundImages}
+            <ParticlesBackground/>
         </div>
     )
 }

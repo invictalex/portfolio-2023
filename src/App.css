@@ -589,3 +589,12 @@ textarea{
 .contact button:hover:before{
   right:0;
 }
+
+
+.homepage-parallax{
+  z-index: 10;
+}
+
+.contact{
+  background: var(--dark);
+}
