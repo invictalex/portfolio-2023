@@ -1,4 +1,3 @@
-import { ParallaxLayer } from '@react-spring/parallax'
 import layer1 from "../../../src/assets/layers/layer1.svg"
 import layer2 from "../../../src/assets/layers/layer2.svg"
 import layer3 from "../../../src/assets/layers/layer3.svg"
@@ -8,33 +7,56 @@ import layer6 from "../../../src/assets/layers/layer6.svg"
 import layer7 from "../../../src/assets/layers/layer7.svg"
 import ParticlesBackground from '../../components/ParticlesBackground.jsx'
 
+import { motion, useScroll, useTransform } from "framer-motion"
+import React, { useRef } from "react"
+
 const layers = [ layer6, layer5, layer4, layer3, layer2, layer1]
 
 
 
 export default function Home(){
 
+    const ref = useRef(null)
+    const {scrollYProgress} = useScroll({
+        target: ref,
+        offset: ["start start", "end start"]
+    })
+
+    const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+    const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"])
+
     const backgroundImages = layers.map((layer, i) => {
 
+        const speed = useTransform(scrollYProgress, [0, 1], ["0%", `${50 - (i*10)}%`])
+
         return(
-            <ParallaxLayer speed={i/10} className="homepage-parallax">
-                <div className="parallax-image-layer" style={{backgroundImage: `url(${layer})`}}></div>
-            </ParallaxLayer>
+            <motion.div 
+                className="homepage--layer" 
+                style=
+                {{
+                    backgroundImage: `url(${layer})`, 
+                    zIndex: i*10,
+                    y: speed
+                        
+
+                }}
+            >
+            </motion.div>
         )
             
     })
 
     return(
-        <div  className="homepage">
-            <ParallaxLayer speed={1.5} className="homepage-tagline">
+        <div ref={ref} className="homepage">
 
-                <p className='tagline'>Hi there, I'm Alex from London, and I develop software for 
-                people who want to create <b>outstanding digital experiences.</b></p>
-            </ParallaxLayer>
+            <p className='homepage--text'>
+                Hi there, I'm Alex from London, and I develop software for 
+                people who want to create <b>outstanding digital experiences.</b>
+            </p>
 
 
             {backgroundImages}
-            <ParticlesBackground/>
+            {/* <ParticlesBackground/> */}
         </div>
     )
 }

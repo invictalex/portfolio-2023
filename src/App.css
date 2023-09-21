@@ -28,12 +28,7 @@ section{
   width: calc(100vw - 180px);
   padding-inline: 15px;
   max-width: 1100px;
-  height: 90%;
-  /*border: solid 2px red;*/
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  border: solid 2px red;
   box-sizing: border-box;
   transition: 0.3s;
 }
@@ -42,13 +37,22 @@ h1{
   text-align: center;
 }
 
-.parallax-page{
-  min-height: 100vh;
-  z-index: 1!important;
-}
 
 .app{
   position: relative;
+}
+
+.content-pages{
+  background: black;
+  border: solid 3px green;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  height: 2000px;
+  overflow: hidden;
+  box-sizing: border-box;
+  gap: 50px;
 }
 /*                                                  NAV*/
 
@@ -150,13 +154,39 @@ nav div:hover::after{
 
 .homepage{
   background: var(--light);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  position: relative;
 }
+
+.homepage--text{
+  position: relative;
+  z-index: 10;
+}
+
+.homepage--layer{
+  position: absolute;
+  background-position: bottom;
+  background-size: contain;
+  inset: 0px;
+  background-repeat: repeat-x;
+  transition: 0.2s smooth;
+}
+
+@media (max-width: 1400px){ .homepage--layer{background-size:1400px; }}
+
+
+
+
 .homepage .parallax-image-layer{
   background-size:1800px;
   background-repeat: repeat-x;
   background-position: bottom;
   height: 100vh;
-  width: 100%
+  width: 100%;
+  
 }
 
 .homepage-tagline{
@@ -183,10 +213,7 @@ nav div:hover::after{
 
 
 
-.about{
-  background: var(--darker);
-  background: linear-gradient(0deg, var(--darker) 0%, var(--darkest) 100%);
-}
+
 
 .about h1{
   text-align: center;
@@ -327,17 +354,9 @@ nav div:hover::after{
 
 
 /*                                                        PROJECTS*/
-.work{
-  background: var(--dark);
-  background: linear-gradient(0deg, var(--dark) 0%, var(--darker) 90%);
-}
-.contact{
-  z-index: -1;
-}
 
-.projects{
-  margin-top: 50px;
-}
+
+
 
 
 .project-card{
@@ -608,6 +627,3 @@ textarea{
   z-index: 0;
 }
 
-.contact{
-  background: var(--dark);
-}

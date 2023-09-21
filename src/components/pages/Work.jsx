@@ -7,8 +7,9 @@ export default function Work(props) {
     var y = props.YPosition
 
     return(
-        <ParallaxLayer offset={1.55} speed={0.75} factor={3.05} className="work parallax-layer">
-        <section style={y >= 593 ? {opacity: 1} : {opacity: 0} }> 
+        <div className="work">
+        {/* <section style={y >= 593 ? {opacity: 1} : {opacity: 0} }>  */}
+        <section>
             <h1>Projects</h1>
             <div className="work--content">
 
@@ -16,6 +17,6 @@ export default function Work(props) {
             </div>
             
         </section>
-        </ParallaxLayer>
+        </div>
     )
 }
