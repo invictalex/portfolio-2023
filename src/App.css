@@ -159,6 +159,20 @@ nav div:hover::after{
   width: 100%
 }
 
+.homepage-tagline{
+  z-index: 6000;
+}
+
+.tagline{
+  position: absolute;
+  text-align: left;
+  top: 40px;
+  left: 50px;
+  font-size: 25px;
+  z-index: 5000;
+  width: 50%;
+}
+
 @media (max-width: 1400px){ .parallax-image-layer{background-size:1400px; }}
 @media (max-width: 1000px){ .parallax-image-layer{background-size:1000px; }}
 
@@ -316,7 +330,6 @@ nav div:hover::after{
 .work{
   background: var(--dark);
   background: linear-gradient(0deg, var(--dark) 0%, var(--darker) 90%);
-  z-index: 200;
 }
 .contact{
   z-index: -1;
@@ -592,7 +605,7 @@ textarea{
 
 
 .homepage-parallax{
-  z-index: 10;
+  z-index: 0;
 }
 
 .contact{

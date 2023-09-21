@@ -5,7 +5,7 @@ import Technologies from "./sections/Technologies"
 
 export default function About() {
     return(
-        <ParallaxLayer offset={0.99} speed={0.7} factor={1.3} className="about parallax-page" >
+        <ParallaxLayer offset={0.999} speed={0.65} factor={1.3} className="about parallax-page" >
             <section>
                 <h1>About</h1>
                 <div className="about--content">

@@ -17,7 +17,7 @@ export default function Home(){
     const backgroundImages = layers.map((layer, i) => {
 
         return(
-            <ParallaxLayer speed={i/10} className="homepage=parallax">
+            <ParallaxLayer speed={i/10} className="homepage-parallax">
                 <div className="parallax-image-layer" style={{backgroundImage: `url(${layer})`}}></div>
             </ParallaxLayer>
         )
@@ -26,6 +26,12 @@ export default function Home(){
 
     return(
         <div  className="homepage">
+            <ParallaxLayer speed={1.5} className="homepage-tagline">
+
+                <p className='tagline'>Hi there, I'm Alex from London, and I develop software for 
+                people who want to create <b>outstanding digital experiences.</b></p>
+            </ParallaxLayer>
+
 
             {backgroundImages}
             <ParticlesBackground/>
