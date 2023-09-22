@@ -11,12 +11,33 @@ import ContentPages from './components/pages/ContentPages'
 
 function App() {
 
+
+  const homeRef = useRef(null)
+  const aboutRef = useRef(null)
+  const projectsRef = useRef(null)
+  const contactRef = useRef(null)
+
+  const scrollToSection = (ref) => {
+    
+    ref === homeRef ? scrollTo(0,0) : ref.current?.scrollIntoView({behaviour: "smooth"})
+  }
+
   return (
 
-    <div>
+    <>
+      <Navbar 
+        handleClick={scrollToSection} 
+        homeRef={homeRef} 
+        aboutRef={aboutRef} 
+        projectsRef={projectsRef} 
+        contactRef={contactRef}
+      />
+
       <Home />
-      <About />
-    </div>
+      <About reference={aboutRef}/>
+      <Work reference={projectsRef} />
+      <Contact reference={contactRef}  />
+    </>
 
     
     

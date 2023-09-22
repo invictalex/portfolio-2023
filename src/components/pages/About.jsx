@@ -1,13 +1,12 @@
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-
 import Bio from "./sections/Bio"
 import Technologies from "./sections/Technologies"
 
-export default function About() {
+export default function About(props) {
+
+
     return(
-        <div className="about" >
-            <section>
-                <h1>About</h1>
+            <section ref={props.reference} className="about" >
+                <h1 >About</h1>
                 <div className="about--content">
                 <Bio />
                 <span className="about--divider"></span>
@@ -15,6 +14,5 @@ export default function About() {
                 </div>
                 
             </section>
-        </div>
     )
 }

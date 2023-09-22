@@ -27,7 +27,7 @@ export default function Home(){
 
     const backgroundImages = layers.map((layer, i) => {
 
-        const speed = useTransform(scrollYProgress, [0, 1], ["0%", `${50 - (i*10)}%`])
+        const customMovement = useTransform(scrollYProgress, [0, 1], ["0%", `${50 - (i*10)}%`])
 
         return(
             <motion.div 
@@ -36,9 +36,7 @@ export default function Home(){
                 {{
                     backgroundImage: `url(${layer})`, 
                     zIndex: i*10,
-                    y: speed
-                        
-
+                    y: customMovement
                 }}
             >
             </motion.div>
@@ -48,6 +46,7 @@ export default function Home(){
 
     return(
         <div ref={ref} className="homepage">
+           
 
             <p className='homepage--text'>
                 Hi there, I'm Alex from London, and I develop software for 
@@ -56,7 +55,8 @@ export default function Home(){
 
 
             {backgroundImages}
-            {/* <ParticlesBackground/> */}
+
+            <ParticlesBackground/>
         </div>
     )
 }

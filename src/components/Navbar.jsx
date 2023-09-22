@@ -6,27 +6,26 @@ import {useState} from "react"
 export default function Navbar(props){
 
 
-    var y = props.YPosition
+   const {handleClick, homeRef, aboutRef, projectsRef, contactRef} = props
 
-
-    var {current} = props.reference
+    
 
     return(
-       <nav style={{"--nav-color": y >= 200 ? "#ebefe8" : "#2a2d2b"}}>
-            <div classname="item" onClick={() => current.scrollTo(0) }>
-                <span style={{display: 400 >= y  ? "block" : "none" }}></span>
+       <nav >
+            <div className="nav-item" onClick={() => handleClick(homeRef)}>
+                <span ></span>
                 Home
             </div>
-            <div classname="item" onClick={() => current.scrollTo(0.59)}>
-                <span style={{display: 400 <= y && 893 >= y  ? "block" : "none" }}></span>
+            <div className="nav-item" onClick={() => handleClick(aboutRef)}>
+                <span ></span>
                 About
             </div>
-            <div classname="item" onClick={() => current.scrollTo(1.3)}>
-                <span style={{display: 893 <= y && 2000 >= y  ? "block" : "none" }}></span>
+            <div className="nav-item" onClick={() => handleClick(projectsRef)} >
+                <span ></span>
                 Projects
             </div>
-            <div classname="item" onClick={() => current.scrollTo(3)}>
-                <span style={{display: 2000 <= y ? "block" : "none" }}></span>
+            <div className="nav-item" onClick={() => handleClick(contactRef)}>
+                <span ></span>
                 Contact
             </div>
         </nav>
