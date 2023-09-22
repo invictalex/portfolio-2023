@@ -7,14 +7,14 @@ import layer6 from "../../../src/assets/layers/layer6.svg"
 import layer7 from "../../../src/assets/layers/layer7.svg"
 import ParticlesBackground from '../../components/ParticlesBackground.jsx'
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import React, { useRef } from "react"
+import { motion, useScroll, useTransform, useInView } from "framer-motion"
+import React, { useRef, useEffect} from "react"
 
 const layers = [ layer6, layer5, layer4, layer3, layer2, layer1]
 
 
 
-export default function Home(){
+export default function Home(props){
 
     const ref = useRef(null)
     const {scrollYProgress} = useScroll({
@@ -22,8 +22,7 @@ export default function Home(){
         offset: ["start start", "end start"]
     })
 
-    const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
-    const textY = useTransform(scrollYProgress, [0, 1], ["0%", "200%"])
+    
 
     const backgroundImages = layers.map((layer, i) => {
 
@@ -31,6 +30,7 @@ export default function Home(){
 
         return(
             <motion.div 
+                key={i}
                 className="homepage--layer" 
                 style=
                 {{
@@ -45,7 +45,8 @@ export default function Home(){
     })
 
     return(
-        <div ref={ref} className="homepage">
+        <div ref={ref} className="homepage" >
+            <div className="anchor home" ref={props.anchor}></div>
            
 
             <p className='homepage--text'>

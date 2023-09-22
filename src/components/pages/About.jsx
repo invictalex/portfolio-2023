@@ -1,11 +1,15 @@
 import Bio from "./sections/Bio"
 import Technologies from "./sections/Technologies"
+import { motion, useScroll } from "framer-motion"
+
 
 export default function About(props) {
 
 
     return(
-            <section ref={props.reference} className="about" >
+            <motion.section ref={props.reference} className="about">
+                
+                <div className="anchor" ref={props.anchor}></div>
                 <h1 >About</h1>
                 <div className="about--content">
                 <Bio />
@@ -13,6 +17,6 @@ export default function About(props) {
                 <Technologies />
                 </div>
                 
-            </section>
+            </motion.section>
     )
 }

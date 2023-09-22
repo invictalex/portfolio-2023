@@ -7,7 +7,7 @@ export default function Technologies() {
 
             if (i >= a && i < b){
                 return (
-                <div className="icon">
+                <div className="icon" key={i}>
                     <img src={item.url} className ="icon--image"/>
                     <h6 className="icon--text">{item.name}</h6>
                 </div>
@@ -25,12 +25,12 @@ export default function Technologies() {
 
         const iconRows = [iconRow1, iconRow2, iconRow3, iconRow4]
 
-        return iconRows.map(iconRow => <div className="row">{iconRow}</div>)
+        return iconRows.map((iconRow, i) => <div className="row" key={i}>{iconRow}</div>)
     }
 
     return(
         <div className="about--technologies">
-            <h2 className="technologies--heading">My technologies</h2>
+            <h4 className="technologies--heading">My technologies</h4>
             <div className="technologies--icons">
                 {makeRows()}
             </div>

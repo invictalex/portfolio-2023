@@ -8,6 +8,7 @@ export default function Work(props) {
 
     return(
         <section ref={props.reference} className="work" >
+            <div className="anchor" ref={props.anchor}></div>
             <h1 >Projects</h1>
             <div className="work--content">
 
