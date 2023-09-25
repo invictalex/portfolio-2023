@@ -11,12 +11,14 @@ export default function Bio(){
         <div speed={0.8} className="about--bio">
             <BioAvatar />
             <p className="about--bio--text">
-                In 2020, as the world stood still, I took the opportunity to teach myself to code.
-                Since then, I've studied, worked for two companies, and created websites for people
-                like John Lewis and Marks & Spencer. Equipped with a deep passion for JavaScript and React, 
-                I am on a journey to push digital software to its full capabilities. <br></br>
+            During the pandemic, I decided to learn to code. Three years on, I’ve trained at a software development start-up, 
+            worked for a communications agency, and developed websites for people like Marks & Spencer. 
+            Equipped with a deep passion for React and JS ES6, I am devoted to creating mouthwatering UIs. 
+            Away from the screen, you’ll find me in my garden or in the kitchen – always creating something.
+            <br />
+            <br />
                 <span className="about--bio--resume">
-                    <a href=""> Download CV</a><img src={link} className="about--bio--resume--icon"/>
+                    <a href=""><b>CV</b></a><img src={link} className="about--bio--resume--icon"/>
                 </span>
             </p>
            

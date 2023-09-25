@@ -1,20 +1,31 @@
 import ContactForm from "./sections/ContactForm"
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { motion, useScroll, useTransform } from "framer-motion"
 
 
 export default function Contact(props) {
 
+    const {scrollYProgress} = useScroll({
+        target: props.reference,
+        offset: ["0 1", "0.8 1"]
+      })
+    
 
     return(
-        <section ref={props.reference} className="contact" >
+        <motion.section 
+        ref={props.reference} 
+        className="contact" 
+        style={{
+            opacity: scrollYProgress,
+        }}
+        >
             <div className="anchor" ref={props.anchor}></div>
             <div className="contact-form--info">
                 <h1>Contact</h1>
-                <p>If you'd like to contact me, fill out the form and I'll be in touch.</p>
+                <p>If you'd like a website built, are interested in working together, or just want to reach out, fill out the form and I'll be in touch.</p>
             </div>
            
             <ContactForm />
-        </section>
+        </motion.section>
     )
 
 }

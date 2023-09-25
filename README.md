@@ -34,9 +34,11 @@ Pages
 
 The first deployment of this app is now live. The necessary changes are:
 
-- Fix contact page positioning Y
-- Create hover effect on project images Y
-- Create horizontal scroll effect on projects Y
-- Add particles to homescreen
-- create loading bar
-- add fade effect on pages Y
+- Add footer
+- Add link functionality to home arrow
+- Add links to bio
+- Add links to projects data
+- Swap waitrose with pear tree
+- Add text for 4 projects
+- [Maybe] Create scroll fade animations on projects
+- [Maybe] create loading bar

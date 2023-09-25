@@ -1,4 +1,3 @@
-
 /*                                                    GENERAL*/
 
 @font-face {
@@ -19,8 +18,9 @@ html{
   --darkest: #2a2d2b;
   --darker: #3a403d;
   --dark: #53605a;
-  --light: #ebefe8;
-  --nav-color: #2a2d2b;
+  --light: #a5aca7;
+  --lighter: #ebefe8;
+  --nav-color: var(--darkest);
   font-family: satoshi-r, sans-serif;
   
 }
@@ -38,7 +38,7 @@ body{
 }
 
 section{
-  color: var(--light);
+  color: var(--lighter);
   width: calc(100vw - 180px);
   padding-inline: 15px;
   max-width: 1100px;
@@ -50,23 +50,17 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-behavior: smooth;
+
 }
 
-h1{
-  font-size: 51px
-}
+h1{  font-size: 51px }
 
-h3{
-  font-size: 35px;
-}
+h3{  font-size: 35px }
 
-h4{
-  font-size: 24px;
-}
+h4{  font-size: 24px }
 
-h6{
-  font-size: 18px;
-}
+h6{  font-size: 18px }
 
 p, input, textarea{
   font-size: 18px;
@@ -80,7 +74,6 @@ a, a:hover{
 .app{
   position: relative;
 }
-
 
 .anchor{
   position: absolute;
@@ -101,7 +94,7 @@ button, .button{
   position: relative;
   display:block;
   font-weight: 700;
-  color: white;
+  color: var(--lighter);
   text-transform: uppercase;
   overflow:hidden;
   z-index: 1;
@@ -120,7 +113,11 @@ button{
 button:hover, .button:hover{
   color: var(--dark)
 }
-/*                                                          GENERAL: MEDIUM SCREEN*/
+
+
+/*GENERAL: MEDIUM SCREEN*/
+
+
 
 @media (max-width: 1085px){
   h3{
@@ -135,7 +132,8 @@ button:hover, .button:hover{
 }
 
 
-/*                                                          GENERAL: TABLET*/
+
+/*GENERAL: TABLET*/
 
 
 @media (max-width: 900px){
@@ -165,7 +163,9 @@ button:hover, .button:hover{
 }
 
 
-/*                                                    GENERAL: MOBILE*/
+/*GENERAL: MOBILE*/
+
+
 
 @media (max-width: 685px){
   section{
@@ -176,13 +176,15 @@ button:hover, .button:hover{
 
 
 
-/*                                                  NAV*/
+/*                                                      NAV*/
+
+
 
 nav{
   position: fixed;
   top: 0;
   right: 0;
-  padding-right: 10px;
+  padding-right: 20px;
   z-index: 40;
   transition: 0.3s;
   display: flex;
@@ -231,7 +233,10 @@ nav .nav-item{
 }
 
 
-/*                                                    NAV: MOBILE*/
+
+/*NAV: MOBILE*/
+
+
 
 @media (max-width: 685px){
   nav{
@@ -241,11 +246,9 @@ nav .nav-item{
 
 
 
-
-
 /*                                                      HOMEPAGE*/
 
-div#tsparticles {
+#tsparticles {
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -260,6 +263,7 @@ div#tsparticles {
   position: relative;
   overflow: hidden;
   position: relative;
+  color: var(--darkest)
 }
 
 .home.anchor{
@@ -269,7 +273,36 @@ div#tsparticles {
 .homepage--text{
   position: relative;
   z-index: 30;
+  width: 60%;
+  max-width: 680px;
+  margin-left: 15%;
+  margin-top:14vh;
 }
+
+.homepage--text p{
+  margin-bottom: 10px;
+}
+
+.homepage--text img:hover{
+  cursor: pointer;
+}
+
+
+
+.arrow-container{
+  overflow: hidden;
+  width: 30px;
+  height: 0px;
+  position: absolute;
+  transition: 0.5s ease-in
+
+}
+
+.arrow{
+  width: 100%;
+}
+
+
 
 .homepage--layer{
   position: absolute;
@@ -284,22 +317,41 @@ div#tsparticles {
 
 @media (max-width: 1400px){ .homepage--layer{background-size:1400px; }}
 
+/*HOMEPAGE: LARGE SCREEN*/
+
+@media(min-width: 900px){
+  .homepage--text p{
+    font-size: 25px;
+  }
+}
+
+/*HOMEPAGE: MOBILE*/
 
 
-
+@media(max-width: 685px){
+  .homepage--text{
+    width: 85%;
+    padding-inline: 15px;
+    margin-inline: auto;
+  }
+}
 
 /*                                                        ABOUT*/
 
 
 
+/*ABOUT: BIO*/
 
+section.about{
+  color: var(--light);
+
+}
 
 .about--content{
   display: flex;
   justify-content: center;
   align-items:center;
   text-align: center;
-  color: #9ba19d;
   gap: 25px;
 
 }
@@ -324,7 +376,7 @@ div#tsparticles {
 }
 
 .about--bio--resume:hover a {
-  color: var(--light)
+  color: var(--lighter)
 }
 .about--bio--resume:hover .about--bio--resume--icon{
   transform: translate(5px, 2px);
@@ -349,7 +401,11 @@ div#tsparticles {
   display: block;
 }
 
-/*TECHNOLOGIES*/
+
+
+/*ABOUT: TECHNOLOGIES*/
+
+
 
 .technologies--heading{
   margin-bottom: 50px;
@@ -366,6 +422,7 @@ div#tsparticles {
 .technologies--icons .row{
   display: flex;
   flex-direction: column;
+  gap: 18px;
 }
 
 .technologies--icons .icon{
@@ -395,7 +452,11 @@ div#tsparticles {
   opacity:1
 }
 
-/*                                                ABOUT: TABLET*/
+
+
+/* ABOUT: TABLET*/
+
+
 
 @media(max-width: 900px){
   .about--content{
@@ -483,9 +544,12 @@ div#tsparticles {
 .project-info--type{
 margin: 0px;
 text-transform: capitalize;
+color: var(--light)
 }
 .project-info--text{
 margin-bottom: 0;
+color: var(--light)
+
 }
 .project-info--buttons{
   display: flex;
@@ -495,15 +559,14 @@ margin-bottom: 0;
 
 .project-info .button{
   
-  border-bottom: 2px white solid;
+  border-bottom: 2px var(--lighter) solid;
  
 }
-
 
 .project-info .button:before{
   content: "";
   position: absolute;
-  background: white;
+  background: var(--lighter);
   bottom: 0;
   left: 0;
   right: 0;
@@ -517,7 +580,11 @@ margin-bottom: 0;
 }
 
 
-/*                                              PROJECTS: MEDIUM SCREEN*/
+
+/*PROJECTS: MEDIUM SCREEN*/
+
+
+
 
 @media (max-width: 1085px){
   .project-card{
@@ -529,7 +596,11 @@ margin-bottom: 0;
   
 }
 
-/*                                              PROJECTS: TABLET*/
+
+
+/*PROJECTS: TABLET*/
+
+
 
 @media (max-width: 900px)
 {
@@ -559,7 +630,7 @@ margin-bottom: 0;
   }
 
   .project-info .button{
-    border-bottom: 4px white solid
+    border-bottom: 4px var(--lighter) solid
   }
   
 
@@ -599,7 +670,7 @@ input, textarea{
   resize: none;
   background-color: #56615c;
   border: none;
-  color: var(--light);
+  color: var(--lighter);
 }
 
 input:focus, textarea:focus{
@@ -608,7 +679,7 @@ input:focus, textarea:focus{
 }
 
 input::placeholder, textarea::placeholder{
-  color: var(--light);
+  color: var(--lighter);
   opacity: 0.3;
 }
 

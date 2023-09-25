@@ -4,15 +4,13 @@ import layer3 from "../../../src/assets/layers/layer3.svg"
 import layer4 from "../../../src/assets/layers/layer4.svg"
 import layer5 from "../../../src/assets/layers/layer5.svg"
 import layer6 from "../../../src/assets/layers/layer6.svg"
-import layer7 from "../../../src/assets/layers/layer7.svg"
+import downArrow from "../../../src/assets/arrow-down.svg"
 import ParticlesBackground from '../../components/ParticlesBackground.jsx'
 
-import { motion, useScroll, useTransform, useInView } from "framer-motion"
-import React, { useRef, useEffect} from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
+import React, { useRef, useEffect, useState} from "react"
 
 const layers = [ layer6, layer5, layer4, layer3, layer2, layer1]
-
-
 
 export default function Home(props){
 
@@ -22,7 +20,16 @@ export default function Home(props){
         offset: ["start start", "end start"]
     })
 
-    
+    const [arrowVisibility, setArrowVisibility] = useState(0)
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setArrowVisibility("60px")
+        }, 2400);
+        return () => clearTimeout(timer);
+      }, []);
+
+    const {handleClick, aboutRef} = props
 
     const backgroundImages = layers.map((layer, i) => {
 
@@ -48,11 +55,18 @@ export default function Home(props){
         <div ref={ref} className="homepage" >
             <div className="anchor home" ref={props.anchor}></div>
            
+            <div className='homepage--text'>
+                <p >
+                    Hi there, I'm Alex from London, and I develop software for 
+                    people who want to create <b>outstanding digital experiences.</b>
+                </p>
 
-            <p className='homepage--text'>
-                Hi there, I'm Alex from London, and I develop software for 
-                people who want to create <b>outstanding digital experiences.</b>
-            </p>
+                <div className="arrow-container" style={{height: arrowVisibility}}>
+                <img className="arrow" src={downArrow} onClick={() => handleClick(aboutRef)} />
+
+                </div>
+            </div>
+           
 
 
             {backgroundImages}

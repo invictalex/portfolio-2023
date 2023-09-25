@@ -1,13 +1,24 @@
 import Projects from "./sections/Projects"
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { motion, useScroll, useTransform } from "framer-motion"
 
 
 export default function Work(props) {
 
-    var y = props.YPosition
-
+   
+    const {scrollYProgress} = useScroll({
+        target: props.reference,
+        offset: ["0 1", "0.3 1"]
+      })
+    
+     
     return(
-        <section ref={props.reference} className="work" >
+        <motion.section 
+            ref={props.reference} 
+            className="work" 
+            style={{
+                opacity: scrollYProgress,
+            }}
+        >
             <div className="anchor" ref={props.anchor}></div>
             <h1 >Projects</h1>
             <div className="work--content">
@@ -15,6 +26,6 @@ export default function Work(props) {
             <Projects />
             </div>
             
-        </section>
+        </motion.section>
     )
 }

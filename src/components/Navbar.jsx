@@ -1,8 +1,3 @@
-import { useRef } from "react"
-import { ParallaxLayer } from '@react-spring/parallax'
-import {useState} from "react"
-
-
 export default function Navbar(props){
 
    const {handleClick, homeRef, aboutRef, projectsRef, contactRef, 
@@ -10,19 +5,35 @@ export default function Navbar(props){
 
     
     const pages = [
-        [homeRef, viewingHome, "Home"], 
-        [aboutRef, viewingAbout, "About"], 
-        [projectsRef, viewingProjects, "Projects"], 
-        [contactRef, viewingContact, "Contact"]
+        {
+            ref: homeRef,
+            inView: viewingHome,
+            name: "Home"
+        },
+        {
+            ref: aboutRef,
+            inView: viewingAbout,
+            name: "About"
+        },
+        {
+            ref: projectsRef,
+            inView: viewingProjects,
+            name: "Projects"
+        },
+        {
+            ref: contactRef,
+            inView: viewingContact,
+            name: "Contact"
+        },
     ] 
 
     const navItems = pages.map((page, i) => {
 
         return(
-        <div className="nav-item" key={i} onClick={() => handleClick(page[0])}>
+        <div className="nav-item" key={i} onClick={() => handleClick(page.ref)}>
 
-            <span style={{display: page[1] ? "block" : "none"}} className="selector" ></span>
-            {page[2]}
+            <span style={{display: page.inView ? "block" : "none"}} className="selector" ></span>
+            {page.name}
         </div>
         )
     })

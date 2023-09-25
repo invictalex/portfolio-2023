@@ -1,6 +1,6 @@
 import './App.css'
 import { useRef, useEffect, useState} from "react"
-import { useInView } from "framer-motion"
+import { useInView, useScroll } from "framer-motion"
 
 
 import Navbar from "./components/Navbar"
@@ -15,19 +15,16 @@ function App() {
   const viewingHome = useInView(homeRef)
 
   const aboutRef = useRef(null)
-  const aboutAnchor = useRef(null)
-  const viewingAbout = useInView(aboutAnchor)
+  const aboutNavRef = useRef(null)
+  const viewingAbout = useInView(aboutNavRef)
 
   const projectsRef = useRef(null)
-  const projectsAnchor = useRef(null)
-  const viewingProjects = useInView(projectsAnchor)
+  const projectsNavRef = useRef(null)
+  const viewingProjects = useInView(projectsNavRef)
 
   const contactRef = useRef(null)
-  const contactAnchor = useRef(null)
-  const viewingContact = useInView(contactAnchor)
-
-
-
+  const contactNavRef = useRef(null)
+  const viewingContact = useInView(contactNavRef)
 
 
   const scrollToSection = (ref) => {
@@ -54,18 +51,20 @@ function App() {
 
     <Home 
       anchor={homeRef}
+      handleClick={scrollToSection}
+      aboutRef={aboutRef}
     />
     <About 
       reference={aboutRef}
-      anchor={aboutAnchor}
+      anchor={aboutNavRef}
     />
     <Work 
       reference={projectsRef} 
-      anchor={projectsAnchor}
+      anchor={projectsNavRef}
     />
     <Contact 
       reference={contactRef}
-      anchor={contactAnchor}  
+      anchor={contactNavRef}  
     />
   </>
 
