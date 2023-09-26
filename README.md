@@ -41,9 +41,7 @@ The first deployment of this app is now live. The necessary changes are:
 - {Done} Swap waitrose with pear tree
 - {Done} Add text for 4 projects
 
-
-
 - {Done} Make footer responsive
 - {Done} Add custom cursor
 - {Done} Create scroll fade animations on projects
-- [Maybe] create loading bar
+- {Done} create loading bar

@@ -25,7 +25,7 @@ export default function Home(props){
     useEffect(() => {
         const timer = setTimeout(() => {
           setArrowVisibility("60px")
-        }, 2400);
+        }, 5400);
         return () => clearTimeout(timer);
       }, []);
 
