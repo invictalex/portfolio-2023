@@ -522,7 +522,7 @@ section.about{
 }
 
 .project-image:hover{
-  transform: scale(0.9);
+  transform: scale(0.95);
   opacity: 0.4;
   cursor: pointer;
 }

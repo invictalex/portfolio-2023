@@ -85,7 +85,7 @@ export const data = {
             text: "This is a website I built for our client team at Kanda. I set up the files locally with a MySQL database. I populated the stylesheet to match the Figma prototype, and achieved features like the scroll-to-section using JavaScript. Using WordPress, the client team added content through Advanced Custom Fields, and I linked the fields to HTML elements using PHP.",
             code: false,
             image: peartree,
-            url: "https://google.com"
+            url: "https://1peartreestreet.co.uk/"
 
         },
         {
@@ -93,9 +93,9 @@ export const data = {
             type: "Personal",
             languages: "React, CSS",
             text: "This app scans for recipes using inputted ingredients. The React Effect hook wraps an async await function to grab data from the API. State hooks update the UI and localStorage when incoming data changes, and props pass said data between components. Dependencies like React Router DOM and Framer Motion handle navigation and animation. In line with best practice, I used function components throughout.",
-            code: "https://google.com",
+            code: "https://github.com/invictalex/meal-maker",
             image: mealmaker,
-            url: "https://google.com"
+            url: "https://the-meal-maker.netlify.app/"
 
         },
         {
@@ -105,16 +105,16 @@ export const data = {
             text: "Also at Kanda, our premium product offering was a React app, which, at over 40,000 files, is far more complex than its website counterpart. The codebase was developed by PocketApp before I joined, so our developmental input was predominantly styling using Bootstrap. The experience of working on larger-scale apps like this one has been invaluable.",
             code: false,
             image: waitrose,
-            url: "https://google.com"
+            url: "https://www.waitrosewestealing.com/"
         },
         {
             name: "Pixel Sketchpad",
             type: "personal",
             languages: "JavaScript, CSS",
             text: "Built to demonstrate the power of vanilla JavaScript ES6, this is sketchpad allows the user to paint pixel portraits. It uses ternary operators, template literals, and arrow functions throughout, making this game functional in just 105 lines of code. The dark mode feature efficiently uses JavaScript to toggle CSS variable values. If you’re on a PC, I’d urge you to give it a go.",
-            code: "https://google.com",
+            code: "https://github.com/invictalex/pixel-sketch",
             image: pixelsketch,
-            url: "https://google.com"
+            url: "https://the-pixel-sketch.netlify.app/"
 
         },
     ]
