@@ -1,4 +1,6 @@
 import { data } from "../../../data"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 
 export default function Technologies() {
 
@@ -28,13 +30,28 @@ export default function Technologies() {
         return iconRows.map((iconRow, i) => <div className="row" key={i}>{iconRow}</div>)
     }
 
+    const ref = useRef(null)
+    const {scrollYProgress} = useScroll({
+        target: ref,
+        offset: ["0 1", "0.9 1"]
+    })
+    
+    const scaleY = useTransform(scrollYProgress, [0, 1], [0.8, 1])
+
     return(
-        <div className="about--technologies">
+        <motion.div 
+            className="about--technologies"
+            ref={ref}
+            style={{
+                opacity: {scrollYProgress},
+                scale: scaleY
+            }}
+        >
             <h4 className="technologies--heading">My technologies</h4>
             <div className="technologies--icons">
                 {makeRows()}
             </div>
             
-        </div>
+        </motion.div>
     )
 }

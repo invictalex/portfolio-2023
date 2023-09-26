@@ -44,6 +44,6 @@ The first deployment of this app is now live. The necessary changes are:
 
 
 - {Done} Make footer responsive
-- Add custom cursor
-- [Maybe] Create scroll fade animations on projects
+- {Done} Add custom cursor
+- {Done} Create scroll fade animations on projects
 - [Maybe] create loading bar

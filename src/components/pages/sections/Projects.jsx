@@ -1,10 +1,30 @@
 import { data } from "../../../data"
+import { motion, useScroll, useTransform } from "framer-motion"
+import {useRef} from "react"
 
 
 export default function Projects() {
 
-    const projects = data.projects.map((project, i) => (
-        <div className="project-card" key={i}>
+    const projects = data.projects.map((project, i) => {
+
+        const ref = useRef(null)
+
+        const {scrollYProgress} = useScroll({
+            target: ref,
+            offset: ["0 1", "0.9 1"]
+        })
+        
+        const scaleY = useTransform(scrollYProgress, [0, 1], [0.9, 1])
+
+        return(
+        <motion.div 
+            className="project-card" key={i}
+            ref={ref}
+            style={{
+                opacity: scrollYProgress,
+                scale: scaleY
+            }}
+        >
             <div className="project-image" style={{backgroundImage: `url(${project.image}`}}>
                 <a href={project.url} target="_blank"></a>
             </div>
@@ -35,8 +55,8 @@ export default function Projects() {
                     </a>}
                 </div>
             </div>
-        </div>
-    ))
+        </motion.div>
+    )})
 
     return(
     <div className="projects">

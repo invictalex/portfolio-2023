@@ -1,14 +1,29 @@
-import avatar from "../../../assets/avatar.svg"
 import link from "../../../assets/link.svg"
-import {useState} from "react"
 import BioAvatar from "./BioAvatar"
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 
 export default function Bio(){
 
-    const [avatarStatus, setAvatarStatus] = useState(avatar)
+
+    const ref = useRef(null)
+    const {scrollYProgress} = useScroll({
+        target: ref,
+        offset: ["0 1", "0.9 1"]
+    })
+    
+    const scaleY = useTransform(scrollYProgress, [0, 1], [0.8, 1])
 
     return(
-        <div speed={0.8} className="about--bio">
+        <motion.div 
+            className="about--bio"
+            ref={ref}
+            style={{
+                opacity: {scrollYProgress},
+                scale: scaleY
+            }}
+            
+        >
             <BioAvatar />
             <p className="about--bio--text">
             During the pandemic, I decided to learn to code. Three years on, I’ve trained at a software development start-up, 
@@ -23,7 +38,7 @@ export default function Bio(){
             </p>
            
             
-        </div>
+        </motion.div>
 
     )
 }

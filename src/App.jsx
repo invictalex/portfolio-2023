@@ -1,6 +1,8 @@
 import './App.css'
 import { useRef, useEffect, useState} from "react"
 import { useInView, useScroll } from "framer-motion"
+import AnimatedCursor from "react-animated-cursor"
+
 
 
 import Navbar from "./components/Navbar"
@@ -36,6 +38,8 @@ function App() {
   return (
 
   <>
+
+
     <Navbar 
       handleClick={scrollToSection} 
       homeRef={homeRef} 
@@ -70,6 +74,24 @@ function App() {
     <Footer 
       handleClick={scrollToSection}
       goUp={homeRef}
+    />
+
+    <AnimatedCursor 
+      innerSize={12}
+      innerScale={0.5}
+      outerSize={0}
+      color='128, 128, 128'
+      clickables={[
+        'a',
+        'input[type="text"]',
+        'input[type="email"]',
+        'input[type="submit"]',
+        'textarea',
+        'button',
+        ".nav-item",
+        ".back-to-top-button",
+        ".arrow"
+      ]}
     />
   </>
 

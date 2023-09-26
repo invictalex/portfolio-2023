@@ -7,7 +7,7 @@ export default function Work(props) {
    
     const {scrollYProgress} = useScroll({
         target: props.reference,
-        offset: ["0 1", "0.3 1"]
+        offset: ["0 1", "0.2 1"]
       })
     
      
