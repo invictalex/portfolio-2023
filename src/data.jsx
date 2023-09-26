@@ -81,7 +81,7 @@ export const data = {
         {
             name: "Waitrose Web-App",
             type: "commercial",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            text: "Also at Kanda, our premium product offering was a React app for the clients wanting a more interactive experience. I was part of the development team which deployed this app which, at over 40,000 files, is far more complex than its website counterpart. The codebase was developed by PocketApp before I joined the company, so our developmental input was largely in a styling capacity. The experience of working on larger-scale apps like this one has been invaluable.",
             code: false,
             image: waitrose,
             url: "https://google.com"
@@ -89,7 +89,7 @@ export const data = {
         {
             name: "MealMaker App",
             type: "Personal",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            text: "This app scans the web for potential recipes based on inputted ingredients. The React Effect hook was combined with an async await function to grab data from the API. I used State hooks to update the UI and localStorage whenever incoming data changes, and props to pass said data between components. I used dependencies like React Router DOM and Framer Motion for navigation and animation. Each component is functional rather class, in line with best practice.",
             code: "https://google.com",
             image: mealmaker,
             url: "https://google.com"
@@ -98,7 +98,7 @@ export const data = {
         {
             name: "1 Pear Tree Website",
             type: "commercial",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            text: "This is a website I built for our client team at Kanda. I set up the files locally, using MySQL for the database. I populated a CSS stylesheet to match the Figma prototype, the left-fixed nav-panel a standout feature. I used JavaScript for functionality like the scroll-to-section feature. I set up the project on WordPress, the client team added content through Advanced Custom Fields, and I linked the fields to HTML elements using PHP.",
             code: false,
             image: peartree,
             url: "https://google.com"
@@ -107,7 +107,7 @@ export const data = {
         {
             name: "Pixel Sketchpad",
             type: "personal",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+            text: "Built to demonstrate the power of vanilla JavaScript, this is a sketchpad which allows the user to paint pixel portraits. Showing off JS ES6, it uses ternary operators, template literals, and arrow functions throughout, making this game functional in just 105 lines of code. The dark mode feature efficiently uses JavaScript to toggle CSS variable values. Though the concept is simple, the UI is satisfying – if you’re on a PC, I’d urge you to give it a go.",
             code: "https://google.com",
             image: pixelsketch,
             url: "https://google.com"
