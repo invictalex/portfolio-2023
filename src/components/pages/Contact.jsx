@@ -1,5 +1,6 @@
 import ContactForm from "./sections/ContactForm"
 import { motion, useScroll, useTransform } from "framer-motion"
+import Footer from "./sections/Footer"
 
 
 export default function Contact(props) {
@@ -25,6 +26,7 @@ export default function Contact(props) {
             </div>
            
             <ContactForm />
+
         </motion.section>
     )
 

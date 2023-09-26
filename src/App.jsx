@@ -8,6 +8,7 @@ import Home from "./components/pages/Home"
 import About from "./components/pages/About"
 import Work from "./components/pages/Work"
 import Contact from "./components/pages/Contact"
+import Footer from './components/pages/sections/Footer'
 
 function App() {
 
@@ -65,6 +66,10 @@ function App() {
     <Contact 
       reference={contactRef}
       anchor={contactNavRef}  
+    />
+    <Footer 
+      handleClick={scrollToSection}
+      goUp={homeRef}
     />
   </>
 

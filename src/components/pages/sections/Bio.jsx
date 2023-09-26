@@ -12,13 +12,13 @@ export default function Bio(){
             <BioAvatar />
             <p className="about--bio--text">
             During the pandemic, I decided to learn to code. Three years on, I’ve trained at a software development start-up, 
-            worked for a communications agency, and developed websites for people like Marks & Spencer. 
+            worked for a <a href="https://kandaconsulting.co.uk/" target="_blank">communications agency</a>, and developed <a href="https://27kingstreet.co.uk/" target="_blank">websites</a> for people like Marks & Spencer. 
             Equipped with a deep passion for React and JS ES6, I am devoted to creating mouthwatering UIs. 
             Away from the screen, you’ll find me in my garden or in the kitchen – always creating something.
             <br />
             <br />
                 <span className="about--bio--resume">
-                    <a href=""><b>CV</b></a><img src={link} className="about--bio--resume--icon"/>
+                    <a href="">CV</a><img src={link} className="about--bio--resume--icon"/>
                 </span>
             </p>
            

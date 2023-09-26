@@ -35,6 +35,7 @@ html{
 body{
   background: var(--dark);
   background: linear-gradient(0deg, var(--dark) 0%, var(--darker) 35%, var(--darkest) 80%);
+  overflow: hidden scroll;
 }
 
 section{
@@ -184,7 +185,7 @@ nav{
   position: fixed;
   top: 0;
   right: 0;
-  padding-right: 20px;
+  padding-right: 10px;
   z-index: 40;
   transition: 0.3s;
   display: flex;
@@ -360,6 +361,14 @@ section.about{
   min-width: 48%;
 }
 
+.about--bio a {
+  color:#d8e1da;
+  transition: 0.3s;
+}
+.about--bio a:hover{
+  color: var(--lighter)
+}
+
 .bio--avatar{
 
   fill: #373B38;
@@ -374,18 +383,14 @@ section.about{
   stroke-linejoin:bevel;
   transform: translateY(-10px)
 }
-
-.about--bio--resume:hover a {
-  color: var(--lighter)
+.about--bio--resume a{
+  text-decoration: underline;
 }
 .about--bio--resume:hover .about--bio--resume--icon{
   transform: translate(5px, 2px);
   opacity: 1;
 
 
-}
-.about--bio--resume a{
-  color: inherit;
 }
 .about--bio--resume--icon{
   width: 15px;
@@ -659,7 +664,7 @@ section.contact{
 
 
 form{
-  margin-top: 50px;
+  margin-top: 15px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -721,4 +726,64 @@ textarea{
   border-left: 4px white solid;
   }
 
+}
+
+
+
+/*                                                    FOOTER*/
+
+footer{
+ 
+  background-color: var(--darker);
+  height: 150px;
+  width: 100%;
+}
+
+.back-to-top-button{
+  width: 32px;
+    height: 32px;
+    background: var(--lighter);
+    margin: auto;
+    margin-top: -20px;
+    border-radius: 7px;
+    border: solid 4px var(--darker);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
+    position: relative;
+    z-index: 50;
+    cursor: pointer;
+}
+
+.back-to-top-button:hover{
+  transform: translateY(-3px)
+}
+
+footer p{
+  color: var(--light);
+  font-size: 12px;
+  text-align: center;
+}
+
+footer .socials{
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .socials a{
+  width: 30px;
+    height: 30px;
+  background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s;
+
+}
+
+footer .socials a:hover{
+  transform: scale(1.15);
+  cursor: pointer;
 }

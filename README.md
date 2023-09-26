@@ -34,12 +34,16 @@ Pages
 
 The first deployment of this app is now live. The necessary changes are:
 
-- Add footer
-- Add link functionality to home arrow DONE
-- Add links to bio
-- Add links to projects data
-- Swap waitrose with pear tree
-- Add text for 4 projects
+- {Done} Add footer
+- {Done} Add link functionality to home arrow DO
+- {Done} Add links to bio
+- {Done} Add links to projects data
+- {Done} Swap waitrose with pear tree
+- {Done} Add text for 4 projects
+
+
+
+- Make footer responsive
 - Add custom cursor
 - [Maybe] Create scroll fade animations on projects
 - [Maybe] create loading bar
