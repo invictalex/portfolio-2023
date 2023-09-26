@@ -14,6 +14,7 @@ html{
   scroll-behavior: smooth;
 }
 
+
 :root{
   --darkest: #2a2d2b;
   --darker: #3a403d;
@@ -24,6 +25,12 @@ html{
   font-family: satoshi-r, sans-serif;
   
 }
+
+::selection{
+  background: var(--darker);
+  color: var(--lighter)
+  }
+  
 
 #root{
   display: flex;
@@ -254,7 +261,7 @@ nav .nav-item{
   width: 100vw;
   height: 100%;
   background-color: var(--lighter);
-  z-index: 50;
+  z-index: 110;
   transition: 0.3s;
   gap: 20px;
   display: flex;
