@@ -13,7 +13,7 @@ export default function Projects() {
                     {project.name}
                 </h3>
                 <h6 className="project-info--type">
-                    {project.type} project
+                    {project.type} project — {project.languages}
                 </h6>
                 <p className="project-info--text">
                     {project.text}

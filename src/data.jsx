@@ -79,35 +79,39 @@ export const data = {
     ],
     projects: [
         {
-            name: "Waitrose Web-App",
-            type: "commercial",
-            text: "Also at Kanda, our premium product offering was a React app for the clients wanting a more interactive experience. I was part of the development team which deployed this app which, at over 40,000 files, is far more complex than its website counterpart. The codebase was developed by PocketApp before I joined the company, so our developmental input was largely in a styling capacity. The experience of working on larger-scale apps like this one has been invaluable.",
-            code: false,
-            image: waitrose,
-            url: "https://google.com"
-        },
-        {
-            name: "MealMaker App",
-            type: "Personal",
-            text: "This app scans the web for potential recipes based on inputted ingredients. The React Effect hook was combined with an async await function to grab data from the API. I used State hooks to update the UI and localStorage whenever incoming data changes, and props to pass said data between components. I used dependencies like React Router DOM and Framer Motion for navigation and animation. Each component is functional rather class, in line with best practice.",
-            code: "https://google.com",
-            image: mealmaker,
-            url: "https://google.com"
-
-        },
-        {
             name: "1 Pear Tree Website",
             type: "commercial",
-            text: "This is a website I built for our client team at Kanda. I set up the files locally, using MySQL for the database. I populated a CSS stylesheet to match the Figma prototype, the left-fixed nav-panel a standout feature. I used JavaScript for functionality like the scroll-to-section feature. I set up the project on WordPress, the client team added content through Advanced Custom Fields, and I linked the fields to HTML elements using PHP.",
+            languages: "CSS, JavaScript, PHP, WordPress",
+            text: "This is a website I built for our client team at Kanda. I set up the files locally with a MySQL database. I populated the stylesheet to match the Figma prototype, and achieved features like the scroll-to-section using JavaScript. Using WordPress, the client team added content through Advanced Custom Fields, and I linked the fields to HTML elements using PHP.",
             code: false,
             image: peartree,
             url: "https://google.com"
 
         },
         {
+            name: "MealMaker App",
+            type: "Personal",
+            languages: "React, CSS",
+            text: "This app scans for recipes using inputted ingredients. The React Effect hook wraps an async await function to grab data from the API. State hooks update the UI and localStorage when incoming data changes, and props pass said data between components. Dependencies like React Router DOM and Framer Motion handle navigation and animation. In line with best practice, I used function components throughout.",
+            code: "https://google.com",
+            image: mealmaker,
+            url: "https://google.com"
+
+        },
+        {
+            name: "Waitrose Web-App",
+            type: "commercial",
+            languages: "CSS Bootstrap, React",
+            text: "Also at Kanda, our premium product offering was a React app, which, at over 40,000 files, is far more complex than its website counterpart. The codebase was developed by PocketApp before I joined, so our developmental input was predominantly styling using Bootstrap. The experience of working on larger-scale apps like this one has been invaluable.",
+            code: false,
+            image: waitrose,
+            url: "https://google.com"
+        },
+        {
             name: "Pixel Sketchpad",
             type: "personal",
-            text: "Built to demonstrate the power of vanilla JavaScript, this is a sketchpad which allows the user to paint pixel portraits. Showing off JS ES6, it uses ternary operators, template literals, and arrow functions throughout, making this game functional in just 105 lines of code. The dark mode feature efficiently uses JavaScript to toggle CSS variable values. Though the concept is simple, the UI is satisfying – if you’re on a PC, I’d urge you to give it a go.",
+            languages: "JavaScript, CSS",
+            text: "Built to demonstrate the power of vanilla JavaScript ES6, this is sketchpad allows the user to paint pixel portraits. It uses ternary operators, template literals, and arrow functions throughout, making this game functional in just 105 lines of code. The dark mode feature efficiently uses JavaScript to toggle CSS variable values. If you’re on a PC, I’d urge you to give it a go.",
             code: "https://google.com",
             image: pixelsketch,
             url: "https://google.com"
