@@ -1,6 +1,5 @@
-import Projects from "./sections/Projects"
-import { motion, useScroll, useTransform } from "framer-motion"
-
+import ProjectCards from "./sections/ProjectCards"
+import { motion, useScroll } from "framer-motion"
 
 export default function Work(props) {
 
@@ -8,8 +7,7 @@ export default function Work(props) {
     const {scrollYProgress} = useScroll({
         target: props.reference,
         offset: ["0 1", "0.2 1"]
-      })
-    
+    })
      
     return(
         <motion.section 
@@ -23,7 +21,7 @@ export default function Work(props) {
             <h1 >Projects</h1>
             <div className="work--content">
 
-            <Projects />
+            <ProjectCards />
             </div>
             
         </motion.section>

@@ -1,11 +1,11 @@
 import './App.css'
 import { useRef, useEffect, useState} from "react"
-import { useInView, useScroll } from "framer-motion"
+import { useInView } from "framer-motion"
 import AnimatedCursor from "react-animated-cursor"
 import Navbar from "./components/Navbar"
 import Home from "./components/pages/Home"
 import About from "./components/pages/About"
-import Work from "./components/pages/Work"
+import Projects from "./components/pages/Projects"
 import Contact from "./components/pages/Contact"
 import Footer from './components/pages/sections/Footer'
 import Loading from "./components/pages/Loading"
@@ -44,7 +44,9 @@ function App() {
   return (
 
   <>
-    <Loading isLoading={loading}/>
+    <Loading 
+      isLoading={loading}
+    />
    
     <Navbar 
       handleClick={scrollToSection} 
@@ -67,7 +69,7 @@ function App() {
       reference={aboutRef}
       anchor={aboutNavRef}
     />
-    <Work 
+    <Projects 
       reference={projectsRef} 
       anchor={projectsNavRef}
     />

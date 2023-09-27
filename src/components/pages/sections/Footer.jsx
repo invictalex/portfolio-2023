@@ -1,7 +1,7 @@
 import React from "react"
-import backToTop from "../../../assets/back-to-top.svg"
-import email from "../../../assets/email.svg"
-import github from "../../../assets/github.svg"
+import backToTop from "../../../assets/navigation-icons/back-to-top.svg"
+import email from "../../../assets/social-icons/email.svg"
+import github from "../../../assets/social-icons/github.svg"
 
 export default function Footer(props){
 

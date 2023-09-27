@@ -37,12 +37,14 @@ html{
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
 }
 
 body{
   background: var(--dark);
   background: linear-gradient(0deg, var(--dark) 0%, var(--darker) 35%, var(--darkest) 80%);
   overflow: hidden scroll;
+  width: 100%;
 }
 
 section{
@@ -327,7 +329,6 @@ nav .nav-item{
 }
 .homepage{
   min-width: 100%;
-  width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -355,8 +356,6 @@ nav .nav-item{
 .homepage--text img:hover{
   cursor: pointer;
 }
-
-
 
 .arrow-container{
   overflow: hidden;
@@ -768,14 +767,14 @@ textarea{
 .contact button{
   margin-top: 10px;
   align-items: flex-end;
-  border-left: 2px white solid;
+  border-left: 2px var(--lighter) solid;
 
 }
 
 .contact button:before{
   content: "";
   position: absolute;
-  background: white;
+  background: var(--lighter);
   bottom: 0;
   left: 0;
   right: 100%;
@@ -792,7 +791,7 @@ textarea{
 @media(max-width: 900px){
   .contact button{
 
-  border-left: 4px s solid;
+  border-left: 4px var(--lighter) solid;
   }
 
   .contact h1{
@@ -806,27 +805,26 @@ textarea{
 /*                                                    FOOTER*/
 
 footer{
- 
-  background-color: var(--darker);
+  background-color: var(--darkest);
   height: 150px;
   width: 100%;
 }
 
 .back-to-top-button{
   width: 32px;
-    height: 32px;
-    background: var(--lighter);
-    margin: auto;
-    margin-top: -20px;
-    border-radius: 7px;
-    border: solid 4px var(--darker);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: 0.3s;
-    position: relative;
-    z-index: 50;
-    cursor: pointer;
+  height: 32px;
+  background: var(--lighter);
+  margin: auto;
+  margin-top: -20px;
+  border-radius: 7px;
+  border: solid 4px var(--darkest);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s;
+  position: relative;
+  z-index: 50;
+  cursor: pointer;
 }
 
 .back-to-top-button:hover{
@@ -869,8 +867,8 @@ footer .socials a:hover{
     height: 185px;
   }
   .back-to-top-button{
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   }
   footer .socials{
     margin-block: 30px;

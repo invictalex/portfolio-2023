@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import {useRef} from "react"
 
 
-export default function Projects() {
+export default function ProjectCards() {
 
     const projects = data.projects.map((project, i) => {
 

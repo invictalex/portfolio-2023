@@ -1,6 +1,5 @@
 import ContactForm from "./sections/ContactForm"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
 
 
 export default function Contact(props) {

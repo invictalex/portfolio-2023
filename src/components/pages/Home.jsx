@@ -1,16 +1,15 @@
-import layer1 from "../../../src/assets/layers/layer1.svg"
-import layer2 from "../../../src/assets/layers/layer2.svg"
-import layer3 from "../../../src/assets/layers/layer3.svg"
-import layer4 from "../../../src/assets/layers/layer4.svg"
-import layer5 from "../../../src/assets/layers/layer5.svg"
-import layer6 from "../../../src/assets/layers/layer6.svg"
-import downArrow from "../../../src/assets/arrow-down.svg"
 import ParticlesBackground from '../../components/ParticlesBackground.jsx'
-
 import { motion, useScroll, useTransform } from "framer-motion"
 import React, { useRef, useEffect, useState} from "react"
+import foreground from "../../../src/assets/homepage-layers/layer1.svg"
+import midLayer1 from "../../../src/assets/homepage-layers/layer2.svg"
+import midLayer2 from "../../../src/assets/homepage-layers/layer3.svg"
+import midLayer3 from "../../../src/assets/homepage-layers/layer4.svg"
+import midLayer4 from "../../../src/assets/homepage-layers/layer5.svg"
+import mountains from "../../../src/assets/homepage-layers/layer6.svg"
+import downArrow from "../../../src/assets/navigation-icons/arrow-down.svg"
 
-const layers = [ layer6, layer5, layer4, layer3, layer2, layer1]
+const layers = [ mountains, midLayer4, midLayer3, midLayer2, midLayer1, foreground]
 
 export default function Home(props){
 
@@ -31,7 +30,7 @@ export default function Home(props){
 
     const {handleClick, aboutRef} = props
 
-    const backgroundImages = layers.map((layer, i) => {
+    const homepageLayers = layers.map((layer, i) => {
 
         const customMovement = useTransform(scrollYProgress, [0, 1], ["0%", `${50 - (i*10)}%`])
 
@@ -48,7 +47,6 @@ export default function Home(props){
             >
             </motion.div>
         )
-            
     })
 
     return(
@@ -57,7 +55,7 @@ export default function Home(props){
            
             <div className='homepage--text'>
                 <p >
-                    Hi there, I'm Alex from London, and I develop software for 
+                    Hi there. I'm Alex from London, and I develop software for 
                     people who want to create <b>outstanding digital experiences.</b>
                 </p>
 
@@ -67,9 +65,7 @@ export default function Home(props){
                 </div>
             </div>
            
-
-
-            {backgroundImages}
+            {homepageLayers}
 
             <ParticlesBackground/>
         </div>

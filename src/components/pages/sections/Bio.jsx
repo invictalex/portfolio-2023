@@ -1,10 +1,10 @@
-import link from "../../../assets/link.svg"
+import link from "../../../assets/navigation-icons/link.svg"
 import BioAvatar from "./BioAvatar"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
+import CV from "../../../assets/CV.pdf"
 
 export default function Bio(){
-
 
     const ref = useRef(null)
     const {scrollYProgress} = useScroll({
@@ -22,9 +22,9 @@ export default function Bio(){
                 opacity: {scrollYProgress},
                 scale: scaleY
             }}
-            
         >
             <BioAvatar />
+
             <p className="about--bio--text">
             During the pandemic, I decided to learn to code. Three years on, I’ve trained at a software development start-up, 
             worked for a <a href="https://kandaconsulting.co.uk/" target="_blank">communications agency</a>, and developed <a href="https://27kingstreet.co.uk/" target="_blank">websites</a> for people like Marks & Spencer. 
@@ -33,12 +33,10 @@ export default function Bio(){
             <br />
             <br />
                 <span className="about--bio--resume">
-                    <a href="">CV</a><img src={link} className="about--bio--resume--icon"/>
+                    <a href={CV} target="_blank">CV</a><img src={link} className="about--bio--resume--icon"/>
                 </span>
             </p>
-           
             
         </motion.div>
-
     )
 }
