@@ -264,7 +264,6 @@ nav .nav-item{
   height: 100%;
   background-color: var(--lighter);
   z-index: 110;
-  transition: 0.3s;
   gap: 20px;
   display: flex;
   flex-direction: column;
